@@ -1,0 +1,35 @@
+<div class="entry">
+  <span class="title">
+    <%= @entry.title %>
+    <%= image_tag @entry.picture.url if @entry.picture? %>
+  </span>
+
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(@entry.created_at) %> ago.
+  </span>
+  <span>
+    <input type="text" style="visibility:hidden">
+  </span>
+  <span class="body">
+    <%= @entry.body %>
+    <%= image_tag @entry.picture.url if @entry.picture? %>
+  </span>
+</div>
+
+<span>
+    <input type="text" style="visibility:hidden">
+</span>
+
+<ol class="comments">
+    <%= render @comments %>
+</ol>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="comment_form">
+      <% if !current_user.nil? %>
+        <%= render 'shared/comment_form' %>
+      <% end %>
+    </section>
+  </aside>  
+</div>

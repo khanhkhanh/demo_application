@@ -1,0 +1,14 @@
+<% provide(:title, 'All entries') %>
+<h1>All entries</h1>
+
+<% if current_user.nil? %>
+  <p>If you want to comment on these entries, click <%= link_to "here", login_path %> to login </p>
+<% end %>
+
+<%= will_paginate %>
+
+  <ul class="entries">
+	<%= render @entries %>
+  </ul>
+  
+<%= will_paginate %>

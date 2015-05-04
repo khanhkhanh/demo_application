@@ -240,9 +240,84 @@ input {
   }
 }
 
-/* microposts */
+/* entries */
 
-.microposts {
+.entry {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .title {
+    font-size: 50px;
+    color: BlueViolet;
+    font-weight: bold;
+    display: block;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .body {
+    font-size: 28px;
+    color: SeaGreen;
+  }
+  .timestamp {
+    color: $gray-light;
+    font-size: 17px;
+    display: block;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+.entries {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .title {
+    font-weight: bold;
+    color: Red;
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .body {
+    color: SeaGreen;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+/* comments */
+
+.comments {
   list-style: none;
   padding: 0;
   li {
