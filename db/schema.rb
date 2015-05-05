@@ -37,16 +37,6 @@ ActiveRecord::Schema.define(version: 20150505032908) do
   add_index "entries", ["user_id", "created_at"], name: "index_entries_on_user_id_and_created_at"
   add_index "entries", ["user_id"], name: "index_entries_on_user_id"
 
-  create_table "microposts", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
-  add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
-
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
