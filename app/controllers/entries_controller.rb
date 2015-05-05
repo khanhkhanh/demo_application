@@ -6,7 +6,7 @@ class EntriesController < ApplicationController
     @entries = current_user.entries.build(entry_params)
     if @entries.save
       flash[:success] = "Entry created!"
-      redirect_to root_url
+      redirect_to request.referrer || root_url
     else
       @feed_items = []
       render 'static_pages/home'
@@ -28,7 +28,7 @@ class EntriesController < ApplicationController
 
   def destroy
     @entries.destroy
-    flash[:success] = "Entries deleted"
+    flash[:success] = "Entry deleted"
     redirect_to request.referrer || root_url
   end
 
