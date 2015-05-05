@@ -5,7 +5,7 @@ class EntriesController < ApplicationController
   def create
     @entries = current_user.entries.build(entry_params)
     if @entries.save
-      flash[:success] = "Entries created!"
+      flash[:success] = "Entry created!"
       redirect_to root_url
     else
       @feed_items = []
